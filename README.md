@@ -1,5 +1,7 @@
 **1.wtyczki:** \
-	-pylint \
-	-pycodestyle \
+```
+-pylint \
+-pycodestyle - \
+```
 **2.edytor:** \
-	-eclipse \
+>-eclipse
