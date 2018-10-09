@@ -1,1 +1,5 @@
-wtyczki: pylint \n edytor: eclipse
+*1.wtyczki:*
+	-pylint 
+	-pycodestyle
+*2.edytor:*
+	-eclipse
