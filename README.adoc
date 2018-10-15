@@ -1,5 +1,6 @@
 Zaawansowane jezyki progdamowania
 ---------------------------------
+
 . *wtyczki:*
 	* cloc - for count
 	* pylint - looks for programming errors, helps enforcing a coding standard and sniffs for some code smells. It additionally includes pyreverse (an UML diagram generator) and symilar (a similarities checker (flay)).\
