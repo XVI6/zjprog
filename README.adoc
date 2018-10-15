@@ -1,0 +1,8 @@
+# Zaawansowane jezyki progdamowania
+## 1. **wtyczki:** \
+	- cloc - for count
+	- pylint - looks for programming errors, helps enforcing a coding standard and sniffs for some code smells. It additionally includes pyreverse (an UML diagram generator) and symilar (a similarities checker (flay)).\
+	- pycodestyle - \
+	- jedi - autocompletion/static analysis library for Python (rubocop)
+## 2. **edytor:** \
+	- eclipse
