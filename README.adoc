@@ -1,14 +1,25 @@
 Zaawansowane jezyki progdamowania
 --------------------------------
 
-. *wtyczki:*
-	* cloc - count http://cloc.sourceforge.net/[^]
-	* pycodestyle - check Python style conventions https://github.com/PyCQA/pycodestyle[^]
-	* pylint - looks for programming errors and some code smells. `pyreverse` (for UML diagram) and `symilar` (a similarities checker). http://pylint.pycqa.org/en/latest/intro.html[^]
+#### Wtyczki:
 
-	* xenon - monitor code complexity using radon https://github.com/rubik/xenon[^]
-	* radon - computes various metrics https://github.com/rubik/radon[^]
+[options="header,footer"]
+|=======================
 
-. *edytor:*
+|N|Nazwa		|Opis      	|URL
+
+|1|cloc 		|count     	|http://cloc.sourceforge.net/[^]
+
+|2|radon   		|computes various metrics	|https://github.com/rubik/radon[^]
+
+|3|pylint		|looks for programming errors and some code smells. `pyreverse` (for UML diagram) and `symilar` (a similarities checker)|http://pylint.pycqa.org/en/latest/intro.html[^]
+
+|4|xenon		|monitor code complexity using radon|https://github.com/rubik/xenon[^]
+
+|5|pycodestyle 	|check Python style conventions	|https://github.com/PyCQA/pycodestyle[^]
+
+|=======================
+
+#### Edytory:
 	* eclipse
-
+	* VS code
