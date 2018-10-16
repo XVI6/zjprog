@@ -4,7 +4,7 @@ Zaawansowane jezyki progdamowania
 . *wtyczki:*
 	* cloc - count http://cloc.sourceforge.net/[^]
 	* pycodestyle - check Python style conventions https://github.com/PyCQA/pycodestyle[^]
-	* pylint - looks for programming errors and some code smells. `pyreverse` (for UML diagram) and `symilar` (a similarities checker). https://github.com/PyCQA/pylint[^]
+	* pylint - looks for programming errors and some code smells. `pyreverse` (for UML diagram) and `symilar` (a similarities checker). http://pylint.pycqa.org/en/latest/intro.html[^]
 
 	* xenon - monitor code complexity using radon https://github.com/rubik/xenon[^]
 	* radon - computes various metrics https://github.com/rubik/radon[^]
