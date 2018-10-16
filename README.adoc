@@ -1,0 +1,12 @@
+Zaawansowane jezyki progdamowania
+--------------------------------
+
+. *wtyczki:*
+	* pycodestyle - (formerly `pep8`) check Python code against some of the style conventions in PEP 8
+	* pylint - looks for programming errors, helps enforcing a coding standard and sniffs for some code smells.It additionally includes `pyreverse` (an UML diagram generator) and `symilar` (a similarities checker (*flay*)).
+	* xenon - monitor code complexity using radon
+	* cloc - for count
+	* radon - a Python tool that computes various metrics from the source code (`flog`)
+. *edytor:*
+	* eclipse
+
