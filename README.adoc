@@ -90,4 +90,5 @@ print(sieve(10**6))
 radon cc -s SegmentedSieve.py # cc (compute Cyclomatic Complexity)	-s (show complexity)	
     F 3:0 sieve - C (13) <13>
 ```
-
+image::images/l2/new1.png[operators, 1269, 535]
+image::images/l2/new2.png[rang, 923, 327]
