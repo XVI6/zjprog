@@ -7,22 +7,22 @@
 [options="header,footer"]
 |=======================
 | N |Nazwa		|Opis      	
-|{counter:seq}|http://cloc.sourceforge.net/[cloc] 		
+|1|http://cloc.sourceforge.net/[cloc] 		
 |count     	
 
-|{counter:seq}|https://radon.readthedocs.io/en/latest/[radon]  
+|2|https://radon.readthedocs.io/en/latest/[radon]  
 |computes various metrics
 
-|{counter:seq}|https://github.com/rubik/xenon[xenon]		
+|3|https://github.com/rubik/xenon[xenon]		
 |monitor code complexity using radon
 
-|{counter:seq}|http://pylint.pycqa.org/en/latest/intro.html[pylint]		
+|4|http://pylint.pycqa.org/en/latest/intro.html[pylint]		
 |looks for programming errors and some code smells, `pyreverse` (for UML diagram) and `symilar` (a similarities checker)
 
-|{counter:seq}|https://pypi.org/project/prospector/[prospector]	
+|5|https://pypi.org/project/prospector/[prospector]	
 |prospector is a tool to analyse Python code and output information about errors, potential problems, convention violations and complexity. ToolBase: pylint
 
-|{counter:seq}|https://github.com/PyCQA/pycodestyle[pycodestyle] 	
+|6|https://github.com/PyCQA/pycodestyle[pycodestyle] 	
 |check Python style conventions
 
 
