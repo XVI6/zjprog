@@ -29,8 +29,8 @@
 |=======================
 
 === Editors:
-	* eclipse
 	* VS code
+	* eclipse
 	
 ===== 1. Discovering a pain in the code
 
