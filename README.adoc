@@ -41,7 +41,7 @@
 [source, python]
 ```python
 import math
-def sieve(n):	# <13>
+def sieve(n):	#  #<13>
     in_prime = []
     start = 2
     end   = int(math.sqrt(n)) ## Size of every segment
