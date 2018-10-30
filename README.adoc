@@ -60,12 +60,12 @@ def sieve(n):	                                        #  (13)
     if high > n:	                                    # +1 = (9)
         high = n
 
-    while(low <= n):	# +1 = (8)
+    while(low <= n):	                                # +1 = (8)
         temp = [True] * (high-low+1)
-        for each in in_prime:	# +1 = (7)
+        for each in in_prime:	                        # +1 = (7)
 
             t = math.floor(low / each) * each           # +1 = (6)
-            if t < low:		# +1 = (5)
+            if t < low:		                            # +1 = (5)
                 t += each
 
             for j in range(t, high+1, each):	        # +1 = (4)
