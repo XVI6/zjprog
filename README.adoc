@@ -45,7 +45,7 @@ def sieve(n):	                                        # (14)
     end   = int(math.sqrt(n)) ## Size of every segment
     temp = [True] * (end + 1)
     prime = []
-     while((start <= end) and 1):                       # +2 = (14)
+    while((start <= end) and 1):                        # +2 = (14)
         if temp[start] == True:	                        # +1 = (12)
             in_prime.append(start)
             for i in range(start*start, end+1, start):  # +1 = (11)
