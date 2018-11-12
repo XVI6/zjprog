@@ -1,4 +1,4 @@
-= Zaawansowane jezyki progdamowania
+= Zaawansowane jezyki programowania
 
 
 === Plugins:
@@ -39,47 +39,108 @@
 [source, python]
 ```python
 import math
-def sieve(n):	                                        # (14)
+def sieve(n):	                                        # +1 = <13>
     in_prime = []
     start = 2
     end   = int(math.sqrt(n)) ## Size of every segment
     temp = [True] * (end + 1)
     prime = []
-    while((start <= end) and 1):                        # +2 = (14)
-        if temp[start] == True:	                        # +1 = (12)
+    while(start <= end):                                # +1 = <12>
+        if temp[start] == True:	                        # +1 = <11>
             in_prime.append(start)
-            for i in range(start*start, end+1, start):  # +1 = (11)
-                if temp[i] == True:	                    # +1 = (10)
+            for i in range(start*start, end+1, start):  # +1 = <10>
+                if temp[i] == True:	                    # +1 = <9>
                     temp[i] = False
         start += 1
     prime += in_prime
     low = end + 1
     high = low + end - 1
-    if high > n:	                                    # +1 = (9)
+    if high > n:	                                    # +1 = <8>
         high = n
-    while(low <= n):	                                # +1 = (8)
+    while(low <= n):	                                # +1 = <7>
         temp = [True] * (high-low+1)
-        for each in in_prime:	                        # +1 = (7)
-            t = math.floor(low / each) * each           # +1 = (6)
-            if t < low:		                            # +1 = (5)
+        for each in in_prime:	                        # +1 = <6>
+            t = math.floor(low / each) * each
+            if t < low:		                            # +1 = <5>
                 t += each
-            for j in range(t, high+1, each):	        # +1 = (4)
+            for j in range(t, high+1, each):	        # +1 = <4>
                 temp[j - low] = False
-        for j in range(len(temp)):		                # +1 = (3)
-            if temp[j] == True:		                    # +1 = (2)
+        for j in range(len(temp)):		                # +1 = <3>
+            if temp[j] == True:		                    # +1 = <2>
                 prime.append(j+low)
         low = high + 1
         high = low + end - 1
-        if high > n:	                                # +1  = (1)
+        if high > n:	                                # +1  = <1>
             high = n
     return prime
 print(sieve(10**6))
 ```
+.a_star.py
+[source, python]
+```python
+def search(grid,init,goal,cost,heuristic):                                          # +1 = <21>
+    closed = [[0 for col in range(len(grid[0]))] for row in range(len(grid))]       # +2 = <20>
+    closed[init[0]][init[1]] = 1
+    action = [[0 for col in range(len(grid[0]))] for row in range(len(grid))]       # +2 = <18>
+    x = init[0]
+    y = init[1]
+    g = 0
+    f = g + heuristic[init[0]][init[0]]
+    cell = [[f, g, x, y]]
+    found = False
+    resign = False
+    while not found and not resign:                                                 # +2 = <16>
+        if len(cell) == 0:                                                          # +1 = <14>
+            resign = True
+            return "FAIL"
+        else:
+            cell.sort()
+            cell.reverse()
+            next = cell.pop()
+            x = next[2]
+            y = next[3]
+            g = next[1]
+            f = next[0]
+            if x == goal[0] and y == goal[1]:                                       # +2 = <13>
+                found = True
+            else:
+                for i in range(len(delta)):                                         # +1 = <11>
+                    x2 = x + delta[i][0]
+                    y2 = y + delta[i][1]
+                    if x2 >= 0 and x2 < len(grid) and y2 >=0 and y2 < len(grid[0]): # +4 = <10>
+                        if closed[x2][y2] == 0 and grid[x2][y2] == 0:               # +2 = <6>
+                            g2 = g + cost
+                            f2 = g2 + heuristic[x2][y2]
+                            cell.append([f2, g2, x2, y2])
+                            closed[x2][y2] = 1
+                            action[x2][y2] = i
+    invpath = []
+    x = goal[0]
+    y = goal[1]
+    invpath.append([x, y])
+    while x != init[0] or y != init[1]:                                             # +2 = <4>
+        x2 = x - delta[action[x][y]][0]
+        y2 = y - delta[action[x][y]][1]
+        x = x2
+        y = y2
+        invpath.append([x, y])
+    path = []
+    for i in range(len(invpath)):                                                   # +1 = <2>
+    	path.append(invpath[len(invpath) - 1 - i])
+    print("ACTION MAP")
+    for i in range(len(action)):                                                    # +1 = <1>
+        print(action[i])
+    return path
+```
 
 ```sh
-radon cc -s SegmentedSieve.py   # cc (compute Cyclomatic Complexity)	-s (show complexity)
-    F 3:0 sieve - C (14)        # (14)
+$ radon cc -s *.py              # cc (compute Cyclomatic Complexity)	-s (show complexity)
+SegmentedSieve.py   
+    F 3:0 sieve - C (13)        # (13)
+a_star.py
+    F 42:0 search - D (21)      # (21)
 ```
 image::images/l2/new1.png[operators, 1269, 535]
-image::images/l2/new2.png[rang, 923, 327]
+image::images/l2/new2.png[rang, 738, 261]
+https://radon.readthedocs.io/en/latest/commandline.html#the-cc-command[link to radon doc]
 
