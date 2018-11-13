@@ -11,4 +11,4 @@ class GildedRoseTest(unittest.TestCase):
         self.assertEquals("fixme", items[0].name)
 
 if __name__ == '__main__':
-unittest.main()
+    unittest.main()
