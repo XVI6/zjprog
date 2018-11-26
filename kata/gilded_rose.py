@@ -7,14 +7,12 @@ class GildedRose(object):
 
     def update_quality(self):
         for item in self.items:
-            if item.name == "foo":
-                item.name = "fixme"
             if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
                 if item.quality > 0:
                     if item.name != "Sulfuras, Hand of Ragnaros":
                         item.quality = item.quality - 1
                     # added
-                    if item.name == "Conjured Mana Cake":
+                    if "conjured" in item.name.lower():
                         item.quality = item.quality - 1
             else:
                 if item.quality < 50:
