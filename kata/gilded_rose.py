@@ -43,7 +43,6 @@ class GildedRose(object):
         if item.name != "Aged Brie":
             if item.name != "Backstage passes to a TAFKAL80ETC concert":
                 self.my_diff_1_1_1(item)
-                
             else:
                 item.quality = item.quality - item.quality
         else:
